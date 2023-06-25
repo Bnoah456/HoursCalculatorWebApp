@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div id="contain">
+    <h1>@ViewData["Title"]</h1>
+    <div id="pSize">
+        <b>
+            <p>This website was created using Microsoft's ASP.NET 6.0 MVC Pages via Azure as a cloud hosting platform</p>
+            <p>Any inquiries about the development of website, you can reach me here:</p>
+        </b>
+        
+
+    </div>
+    <div >
+        <h2><a id ="contain3r" href="https://www.linkedin.com/in/noah-t-butler/" target="_blank">My LinkedIn page</a></h2>
+    </div>
+    
+</div>
+
+<style>
+
+    #contain
+    {
+        text-align: center;
+    }
+    #contain h1{
+        font-size: 50px;
+        color: #E9E2D5;
+    }
+    #contain3r{
+        color: #E9E2D5
+    }
+
+
+    #pSize
+    {
+        font-size: 25px;
+        color: #E9E2D5;
+    }
+   
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 60px;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(45deg,#5038C9,#2041E8,#1616EB);
+        background-size: 300% 300%;
+        animation: color 12s ease-in-out infinite;
+    }
+
+    @@keyframes color {
+        0% {
+            background-position: 0 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0 50%;
+        }
+    }
+
+</style>

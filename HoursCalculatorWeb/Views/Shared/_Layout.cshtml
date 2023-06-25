@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HoursCalculatorWebApp by Noah Butler</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/HoursCalculatorWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="../wwwroot/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div id="a">
+                    <h2><a id="navbar-brand" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HoursCalculatorWebApp </a></h2>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer ">
+        <div id="container">
+            <h5>&copy; 2023 - HoursCalculatorWebApp--Noah Butler - <a id="container2" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></h5>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+<style>
+
+    #a {
+        color: #E9E2D5;
+        padding-bottom: 10px;
+        text-align: left;
+    }
+
+    #navbar-brand{
+        color: #E9E2D5;
+    }
+
+    #container {
+        color: #E9E2D5;
+    }
+
+    #container2 {
+        color: #E9E2D5;
+    }
+
+    a.navbar-brand {
+        white-space: normal;
+        text-align: center;
+        word-break: break-all;
+    }
+
+    a {
+        color: #0077cc;
+    }
+
+
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    .footer {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px;
+        color: #E9E2D5;
+    }
+
+    }
+
+</style>
+

@@ -1,0 +1,91 @@
+﻿@model HoursCalculatorWeb.Models.CalculatorModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    html {
+    font-size: 14px;
+    }
+
+@@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg,#5038C9,#2041E8,#1616EB);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+@@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#form-container {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+#num {
+    font-size: 23px;
+    height:30px;
+    width: 45px;
+}
+#ampm {
+    font-size: 23px;
+    height: 30px;
+    width: 45px;
+}
+#Submitbtn {
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+}
+
+#timeresult {
+    font-size: 25px;
+}
+</style>
+<div id="form-container">    
+    <form asp-action="Index">
+        <br />
+        <br />
+        <br />
+        <h1 class="display-4"><b>Hours Calculator</b></h1>
+        <p>
+            <b>Start Time:</b> <input type="number" id="num" asp-for="StartHour" /> :
+            <input type="number" id="num" asp-for="StartMinute" />
+            <input type="text" id="ampm" asp-for="AmPM1" />
+        </p>
+        <p>
+            <b>End Time:</b> <input type="number" id="num" asp-for="EndHour" /> :
+            <input type="number" id="num" asp-for="EndMinute" />
+            <input type="text" id="ampm" asp-for="AmPM2" />
+        </p>
+        <p>
+            <input type="submit" id="Submitbtn" value="Submit" asp-for="calculate"/>
+        </p>
+            @*<p><input type="submit"  value="Reset" asp-for="Resetting" /></p>*@
+        <h2>Time Duration:</h2>
+        <p id="timeresult"> 
+            <b>@ViewData["Hour_result"]</b> Hours and <b>@ViewData["Minute_result"]</b> Minutes
+        </p>    
+    </form>
+</div>
