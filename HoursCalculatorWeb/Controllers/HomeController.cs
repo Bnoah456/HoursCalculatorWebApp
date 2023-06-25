@@ -290,18 +290,18 @@ namespace HoursCalculatorWeb.Controllers
 
                 }
 
-            } 
-            //if(cal.Resetting == "Reset") //trying to add a reset button to the Form,not sure how
-            //{
-            //    cal.StartHour = 0;
-            //    cal.StartMinute = 0;
-            //    cal.EndHour = 0;
-            //    cal.EndMinute = 0;
-            //    cal.AmPM1 = string.Empty;
-            //    cal.AmPM2 = "";
-            //    cal.Hour_result = 0;
-            //    cal.Minute_result = 0;
-            //}
+            }
+            if (cal.Resetting == "Reset") //trying to add a reset button to the Form,not sure how
+            {
+                cal.StartHour = 0;
+                cal.StartMinute = 0;
+                cal.EndHour = 0;
+                cal.EndMinute = 0;
+                cal.AmPM1 = string.Empty;
+                cal.AmPM2 = "";
+                cal.Hour_result = 0;
+                cal.Minute_result = 0;
+            }
 
             ViewData["Hour_result"] = cal.Hour_result;
             ViewData["Minute_result"] = cal.Minute_result;

@@ -12,7 +12,7 @@
         public int Hour_result { get; set; }
         public int Minute_result { get; set; }
         
-        //public string Resetting { get; set; }
+        public string Resetting { get; set; }
 
     }
 }
